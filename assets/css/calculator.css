@@ -1,0 +1,303 @@
+/**
+ * Peptide Reconstitution Calculator — Frontend Styles
+ *
+ * Namespace: .prc- prefix on all classes.
+ * Design: Clean, card-based layout. Responsive down to 320px.
+ * Dark mode: respects prefers-color-scheme.
+ *
+ * @see includes/frontend/class-prc-shortcode.php — HTML structure.
+ */
+
+/* ── Container ─────────────────────────────────────────────────────── */
+
+.prc-calculator {
+	max-width: 640px;
+	margin: 2rem auto;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	background: #ffffff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+/* ── Header ────────────────────────────────────────────────────────── */
+
+.prc-calculator__header {
+	padding: 1.25rem 1.5rem;
+	background: linear-gradient(135deg, #1e40af, #3b82f6);
+	color: #ffffff;
+}
+
+.prc-calculator__title {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+/* ── Body (form fields) ───────────────────────────────────────────── */
+
+.prc-calculator__body {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+/* ── Field ─────────────────────────────────────────────────────────── */
+
+.prc-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.375rem;
+}
+
+.prc-field--hidden {
+	display: none;
+}
+
+.prc-field__label {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #374151;
+}
+
+.prc-field__row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.prc-field__input {
+	flex: 1;
+	padding: 0.625rem 0.75rem;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	font-size: 1rem;
+	color: #111827;
+	background: #f9fafb;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prc-field__input:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+	background: #ffffff;
+}
+
+.prc-field__input--half {
+	flex: 0 0 48%;
+}
+
+.prc-field__input--unit {
+	flex: 0 0 80px;
+}
+
+.prc-field__unit {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #6b7280;
+	min-width: 28px;
+}
+
+.prc-field__hint {
+	font-size: 0.8rem;
+	color: #6b7280;
+	margin-top: 0.125rem;
+}
+
+.prc-field__static {
+	font-size: 0.95rem;
+	color: #374151;
+	font-weight: 500;
+}
+
+.prc-field__custom-wrap {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+	flex: 1;
+}
+
+/* ── Results Panel ─────────────────────────────────────────────────── */
+
+.prc-results {
+	padding: 1.5rem;
+	border-top: 1px solid #e5e7eb;
+	background: #f0f9ff;
+}
+
+.prc-results--hidden {
+	display: none;
+}
+
+.prc-results__title {
+	margin: 0 0 1rem 0;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #1e40af;
+}
+
+.prc-results__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 0.75rem;
+}
+
+/* ── Result Card ───────────────────────────────────────────────────── */
+
+.prc-result-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 1rem;
+	text-align: center;
+	transition: transform 0.15s ease;
+}
+
+.prc-result-card--primary {
+	border-color: #3b82f6;
+	background: #eff6ff;
+}
+
+.prc-result-card__value {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #111827;
+	line-height: 1.2;
+}
+
+.prc-result-card--primary .prc-result-card__value {
+	color: #1e40af;
+	font-size: 1.75rem;
+}
+
+.prc-result-card__label {
+	font-size: 0.75rem;
+	color: #6b7280;
+	margin-top: 0.375rem;
+	line-height: 1.3;
+}
+
+/* ── Disclaimer ────────────────────────────────────────────────────── */
+
+.prc-disclaimer {
+	padding: 0.75rem 1.5rem 1rem;
+	font-size: 0.75rem;
+	color: #9ca3af;
+	line-height: 1.5;
+	border-top: 1px solid #f3f4f6;
+}
+
+/* ── Noscript ──────────────────────────────────────────────────────── */
+
+.prc-noscript {
+	padding: 1.5rem;
+	text-align: center;
+	color: #6b7280;
+}
+
+/* ── Dark Mode ─────────────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+	.prc-calculator {
+		background: #1f2937;
+		border-color: #374151;
+	}
+
+	.prc-calculator__header {
+		background: linear-gradient(135deg, #1e3a8a, #2563eb);
+	}
+
+	.prc-field__label {
+		color: #d1d5db;
+	}
+
+	.prc-field__input {
+		background: #111827;
+		border-color: #4b5563;
+		color: #f3f4f6;
+	}
+
+	.prc-field__input:focus {
+		background: #1f2937;
+		border-color: #60a5fa;
+		box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+	}
+
+	.prc-field__unit,
+	.prc-field__hint {
+		color: #9ca3af;
+	}
+
+	.prc-field__static {
+		color: #d1d5db;
+	}
+
+	.prc-results {
+		background: #111827;
+		border-color: #374151;
+	}
+
+	.prc-results__title {
+		color: #60a5fa;
+	}
+
+	.prc-result-card {
+		background: #1f2937;
+		border-color: #374151;
+	}
+
+	.prc-result-card--primary {
+		background: #172554;
+		border-color: #2563eb;
+	}
+
+	.prc-result-card__value {
+		color: #f3f4f6;
+	}
+
+	.prc-result-card--primary .prc-result-card__value {
+		color: #93c5fd;
+	}
+
+	.prc-result-card__label {
+		color: #9ca3af;
+	}
+
+	.prc-disclaimer {
+		color: #6b7280;
+		border-color: #374151;
+	}
+}
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+	.prc-calculator {
+		margin: 1rem;
+		border-radius: 8px;
+	}
+
+	.prc-calculator__body {
+		padding: 1rem;
+	}
+
+	.prc-results {
+		padding: 1rem;
+	}
+
+	.prc-results__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.prc-field__row {
+		flex-wrap: wrap;
+	}
+
+	.prc-field__input--half {
+		flex: 1 1 100%;
+	}
+}
