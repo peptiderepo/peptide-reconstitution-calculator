@@ -25,6 +25,10 @@ class PRC_Math {
 
 	/**
 	 * Standard insulin syringe size in units (100 IU = 1 mL).
+	 *
+	 * Mirrored in: assets/js/calculator.js (SYRINGE_UNITS_PER_ML)
+	 * and prcConfig.syringeUnits (class-prc-shortcode.php).
+	 * All three MUST stay in sync.
 	 */
 	private const SYRINGE_UNITS_PER_ML = 100;
 

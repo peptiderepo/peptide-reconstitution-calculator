@@ -15,6 +15,8 @@
 
 	/* ── Constants ────────────────────────────────────────────────────── */
 
+	// Must match PRC_Math::SYRINGE_UNITS_PER_ML in class-prc-math.php
+	// and prcConfig.syringeUnits in class-prc-shortcode.php.
 	var SYRINGE_UNITS_PER_ML = 100;
 
 	/* ── State ────────────────────────────────────────────────────────── */

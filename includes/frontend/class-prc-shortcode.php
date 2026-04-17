@@ -93,13 +93,13 @@ class PRC_Shortcode {
 			true
 		);
 
-		// Pass presets and config to JS.
+		// Pass presets and config to JS — all REST endpoints are public-read,
+		// so no nonce is needed. The restUrl is provided for future use.
 		$provider = new PRC_Preset_Provider();
 		wp_localize_script( 'prc-calculator', 'prcConfig', [
 			'presets'      => $provider->get_all_presets(),
 			'restUrl'      => esc_url_raw( rest_url( 'prc/v1' ) ),
-			'nonce'        => wp_create_nonce( 'wp_rest' ),
-			'syringeUnits' => 100,
+			'syringeUnits' => 100, // Must match PRC_Math::SYRINGE_UNITS_PER_ML and calculator.js SYRINGE_UNITS_PER_ML.
 			'i18n'         => [
 				'selectPeptide'  => __( 'Select a peptide…', 'peptide-reconstitution-calculator' ),
 				'customEntry'    => __( 'Custom / Manual Entry', 'peptide-reconstitution-calculator' ),

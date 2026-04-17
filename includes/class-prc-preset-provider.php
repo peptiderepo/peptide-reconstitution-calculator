@@ -85,6 +85,13 @@ class PRC_Preset_Provider {
 	 * @return array<int, array<string, mixed>>
 	 */
 	private function build_presets_from_pr_core(): array {
+		// Why class_exists: PR_CORE_VERSION constant may be defined but classes
+		// could fail to autoload (e.g. fatal error in PR Core bootstrap).
+		// Fall back to empty array so the caller merges in defaults gracefully.
+		if ( ! class_exists( 'PR_Core_Peptide_Repository' ) || ! class_exists( 'PR_Core_Dosing_Repository' ) ) {
+			return [];
+		}
+
 		$peptide_repo = new PR_Core_Peptide_Repository();
 		$dosing_repo  = new PR_Core_Dosing_Repository();
 
