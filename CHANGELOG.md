@@ -3,6 +3,11 @@
 All notable changes to Peptide Reconstitution Calculator are documented here.
 Format: [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] — 2026-04-26
+
+### Changed
+- `assets/css/calculator.css`: adopted brand tokens — header gradient → teal (was blue), focus states → teal, results panel → teal-50, font → Inter; dark mode updated to teal scale
+
 ## [1.0.0] — 2026-04-17
 
 ### Added

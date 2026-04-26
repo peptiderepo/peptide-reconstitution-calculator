@@ -13,7 +13,7 @@
 .prc-calculator {
 	max-width: 640px;
 	margin: 2rem auto;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	border: 1px solid #e2e8f0;
 	border-radius: 12px;
 	background: #ffffff;
@@ -25,7 +25,7 @@
 
 .prc-calculator__header {
 	padding: 1.25rem 1.5rem;
-	background: linear-gradient(135deg, #1e40af, #3b82f6);
+	background: linear-gradient(135deg, var(--teal-700), var(--teal-500));
 	color: #ffffff;
 }
 
@@ -82,8 +82,8 @@
 
 .prc-field__input:focus {
 	outline: none;
-	border-color: #3b82f6;
-	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+	border-color: var(--teal-500);
+	box-shadow: 0 0 0 3px rgba(27, 138, 146, 0.15);
 	background: #ffffff;
 }
 
@@ -126,7 +126,7 @@
 .prc-results {
 	padding: 1.5rem;
 	border-top: 1px solid #e5e7eb;
-	background: #f0f9ff;
+	background: var(--teal-50);
 }
 
 .prc-results--hidden {
@@ -137,7 +137,7 @@
 	margin: 0 0 1rem 0;
 	font-size: 1rem;
 	font-weight: 600;
-	color: #1e40af;
+	color: var(--teal-700);
 }
 
 .prc-results__grid {
@@ -158,8 +158,8 @@
 }
 
 .prc-result-card--primary {
-	border-color: #3b82f6;
-	background: #eff6ff;
+	border-color: var(--teal-500);
+	background: var(--teal-50);
 }
 
 .prc-result-card__value {
@@ -170,7 +170,7 @@
 }
 
 .prc-result-card--primary .prc-result-card__value {
-	color: #1e40af;
+	color: var(--teal-700);
 	font-size: 1.75rem;
 }
 
@@ -208,7 +208,7 @@
 	}
 
 	.prc-calculator__header {
-		background: linear-gradient(135deg, #1e3a8a, #2563eb);
+		background: linear-gradient(135deg, var(--teal-800), var(--teal-600));
 	}
 
 	.prc-field__label {
@@ -223,8 +223,8 @@
 
 	.prc-field__input:focus {
 		background: #1f2937;
-		border-color: #60a5fa;
-		box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+		border-color: var(--teal-400);
+		box-shadow: 0 0 0 3px rgba(27, 138, 146, 0.2);
 	}
 
 	.prc-field__unit,
@@ -242,7 +242,7 @@
 	}
 
 	.prc-results__title {
-		color: #60a5fa;
+		color: var(--teal-400);
 	}
 
 	.prc-result-card {
@@ -251,8 +251,8 @@
 	}
 
 	.prc-result-card--primary {
-		background: #172554;
-		border-color: #2563eb;
+		background: var(--teal-900);
+		border-color: var(--teal-600);
 	}
 
 	.prc-result-card__value {
@@ -260,7 +260,7 @@
 	}
 
 	.prc-result-card--primary .prc-result-card__value {
-		color: #93c5fd;
+		color: var(--teal-300);
 	}
 
 	.prc-result-card__label {
